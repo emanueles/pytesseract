@@ -86,6 +86,8 @@ def run_tesseract(input_filename, output_filename_base, lang=None, boxes=False, 
 
     if boxes:
         command += ['batch.nochop', 'makebox']
+
+    command += ['-psm', '8']
         
     if config:
         command += shlex.split(config)
